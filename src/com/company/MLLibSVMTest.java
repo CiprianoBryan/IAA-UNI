@@ -11,11 +11,10 @@ public class MLLibSVMTest {
             data = DataSource.read(filepath);
             if (data.classIndex() == -1)
                 data.setClassIndex(data.numAttributes() - 1);
-            //LibSVM reg = new LibSVM();
-            //String[] options = weka.core.Utils.splitOptions("-t");
-            //reg.setOptions(options);
-            //reg.buildClassifier(data);
-
+            LibSVM reg = new LibSVM();
+            String[] options = weka.core.Utils.splitOptions("-K 0 -D 3");
+            reg.setOptions(options);
+            reg.buildClassifier(data);
         } catch (Exception e) {
             e.printStackTrace();
         }

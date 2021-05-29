@@ -1,15 +1,7 @@
-/*
- *    IncrementalClassifier.java
- *    Copyright (C) 2009 University of Waikato, Hamilton, New Zealand
- *
- */
-
-package wekaexamples.classifiers;
-
-import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
+import weka.classifiers.bayes.NaiveBayesUpdateable;
 
 import java.io.File;
 
@@ -18,7 +10,6 @@ import java.io.File;
  * from the ArffLoader.
  *
  * @author FracPete (fracpete at waikato dot ac dot nz)
- * @version $Revision$
  */
 public class IncrementalClassifier {
 

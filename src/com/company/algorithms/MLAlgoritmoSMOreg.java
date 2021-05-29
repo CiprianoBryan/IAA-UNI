@@ -1,4 +1,4 @@
-package com.company;
+package com.company.algorithms;
 
 import weka.classifiers.functions.SMO;
 import weka.core.Instances;
@@ -15,7 +15,7 @@ public class MLAlgoritmoSMOreg {
             String[] options = weka.core.Utils.splitOptions("weka.classifiers.trees.J48 -C 0.25 -M 2");
             reg.setOptions(options);
             reg.buildClassifier(data);
-
+            System.out.println(reg.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }

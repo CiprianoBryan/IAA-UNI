@@ -12,8 +12,6 @@ public class MLAlgoritmoSMOreg {
             if (data.classIndex() == -1)
                 data.setClassIndex(data.numAttributes() - 1);
             SMO reg = new SMO();
-            String[] options = weka.core.Utils.splitOptions("weka.classifiers.trees.J48 -C 0.25 -M 2");
-            reg.setOptions(options);
             reg.buildClassifier(data);
             System.out.println(reg.toString());
         } catch (Exception e) {
